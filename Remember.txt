@@ -1,2 +1,1 @@
- your name is 
- my name is hrithik
+my name is hrithik
