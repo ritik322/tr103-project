@@ -1,0 +1,59 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "are you there"],
+      "responses": ["Hello sir", "Hi, ready to help", "System is online"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "exit", "quit", "stop", "goodbye"],
+      "responses": ["Goodbye sir", "Shutting down"]
+    },
+    {
+      "tag": "screenshot",
+      "patterns": ["take a screenshot", "capture screen", "save this page"],
+      "responses": ["Taking screenshot", "Capturing screen now"]
+    },
+    {
+      "tag": "time",
+      "patterns": ["what is the time", "tell me the time", "current time"],
+      "responses": ["Checking time"]
+    },
+    {
+      "tag": "camera",
+      "patterns": ["take a selfie", "open camera", "click a photo", "take a picture"],
+      "responses": ["Smile!", "Opening camera", "Say cheese"]
+    },
+    {
+      "tag": "google",
+      "patterns": ["search google for", "search for", "find on google", "google search"],
+      "responses": ["Searching Google", "Here is what I found"]
+    },
+    {
+      "tag": "youtube",
+      "patterns": ["play on youtube", "open youtube and play", "watch video"],
+      "responses": ["Playing on YouTube", "Opening YouTube"]
+    },
+    {
+      "tag": "wikipedia",
+      "patterns": ["who is", "tell me about", "wikipedia search", "what is"],
+      "responses": ["Checking Wikipedia", "Fetching information"]
+    },
+    {
+      "tag": "volume_up",
+      "patterns": ["volume up", "increase volume", "louder"],
+      "responses": ["Volume increased", "Turning it up"]
+    },
+    {
+      "tag": "volume_down",
+      "patterns": ["volume down", "decrease volume", "lower the volume"],
+      "responses": ["Volume decreased", "Turning it down"]
+    },
+    {
+      "tag": "mute",
+      "patterns": ["mute", "silence", "unmute"],
+      "responses": ["Muting system", "Toggling mute"]
+    }
+  ]
+}
