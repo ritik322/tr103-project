@@ -2,11 +2,20 @@ import datetime
 import pyautogui
 import webbrowser
 import os
-import cv2  
-import pywhatkit 
+import cv2
+import pywhatkit
 import wikipedia
 from time import sleep
 from speak import say
+
+sys_apps = {
+    "notepad": "notepad.exe",
+    "calculator": "calc.exe",
+    "paint": "mspaint.exe",
+    "cmd": "cmd.exe",
+    "chrome": r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    "excel": r"C:\Program Files\Microsoft Office\root\Office16\EXCEL.EXE"
+}
 
 def execute_intent(intent_tag, user_text):
     if intent_tag == "greeting":
@@ -69,6 +78,17 @@ def execute_intent(intent_tag, user_text):
             say(results)
         except:
             say("I couldn't find that page.")
+
+    elif intent_tag == "open_app":
+        say("Opening application")
+        opened = False
+        for app in sys_apps:
+            if app in user_text:
+                os.startfile(sys_apps[app])
+                opened = True
+                break
+        if not opened:
+            say("I do not have the path for that application yet.")
 
     else:
         say("I understood the command, but I am still learning how to do that.")

@@ -31,6 +31,11 @@
       "responses": ["Searching Google", "Here is what I found"]
     },
     {
+      "tag": "open_app",
+      "patterns": ["open notepad", "start calculator", "open chrome", "run paint", "open word"],
+      "responses": ["Opening application", "Starting it now"]
+    },
+    {
       "tag": "youtube",
       "patterns": ["play on youtube", "open youtube and play", "watch video"],
       "responses": ["Playing on YouTube", "Opening YouTube"]
