@@ -37,13 +37,26 @@ def execute_intent(intent_tag, user_text):
         say("Screenshot saved.")
 
     elif intent_tag == "camera":
-        say("Opening camera. Please smile.")
+        say("Opening camera sir.")
         cap = cv2.VideoCapture(0)
-        sleep(1) 
-        ret, frame = cap.read()
-        if ret:
-            cv2.imwrite("selfie.jpg", frame)
-            say("Photo taken successfully.")
+        
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
+            
+            cv2.imshow('Camera - Press SPACE to Click, Q to Exit', frame)
+            
+            k = cv2.waitKey(1)
+            if k % 256 == 32: 
+                img_name = "selfie.jpg"
+                cv2.imwrite(img_name, frame)
+                say("Photo captured successfully")
+                break
+            elif k % 256 == 113: 
+                say("Closing camera without capturing")
+                break
+                
         cap.release()
         cv2.destroyAllWindows()
 
